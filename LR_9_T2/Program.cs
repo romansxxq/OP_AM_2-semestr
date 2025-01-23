@@ -12,6 +12,8 @@ namespace LR_9_T2
     {
         static bool inputInt(ref int i, string povidom)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
             string s;
             s = i.ToString();
         povtor:
@@ -34,6 +36,7 @@ namespace LR_9_T2
 
         static bool inputDouble(ref double x, string povidom)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             string s;
             s = x.ToString();
         povtor:
@@ -56,6 +59,7 @@ namespace LR_9_T2
 
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             int n, i;
             double x, y, xp, dx;
             xp = 2.5;
