@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_9", "OP_AM_2-semestr\LR_9.csproj", "{A86E68A9-8D44-4B68-BB10-61A304477A4B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_9_T1", "LR_9_T1\LR_9_T1.csproj", "{8D328C9A-C2D9-4F36-9382-019D20ABC929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FC80C6C1-E48C-4948-854F-A54FDC08F4C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "ConsoleApp1\Test.csproj", "{FC80C6C1-E48C-4948-854F-A54FDC08F4C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_9_T2", "LR_9_T2\LR_9_T2.csproj", "{789A6B30-C788-428A-A6DB-92C46A7798CD}"
 EndProject
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A86E68A9-8D44-4B68-BB10-61A304477A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A86E68A9-8D44-4B68-BB10-61A304477A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A86E68A9-8D44-4B68-BB10-61A304477A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A86E68A9-8D44-4B68-BB10-61A304477A4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D328C9A-C2D9-4F36-9382-019D20ABC929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D328C9A-C2D9-4F36-9382-019D20ABC929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D328C9A-C2D9-4F36-9382-019D20ABC929}.Release|Any CPU.ActiveCfg = Release|Any CPU
