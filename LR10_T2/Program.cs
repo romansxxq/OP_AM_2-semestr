@@ -6,16 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LR_9_T2
+namespace LR10_T2
 {
     class Program
     {
         static bool inputInt(ref int i, string povidom)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            string s="";
-            //s = i.ToString();
-        povtor:
+            string s = "";
+        //s = i.ToString();
+        repeat:
             s = i.ToString();
             s = Interaction.InputBox(povidom, "Введення", s);
             try
@@ -26,7 +26,7 @@ namespace LR_9_T2
             {
                 if (MessageBox.Show("Ви ввели не ціле число." + Strings.Chr(13) + "Бажаєте повторити?", "Увага",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    goto povtor;
+                    goto repeat;
                 else
                     return false;
             }
@@ -37,7 +37,7 @@ namespace LR_9_T2
         static bool inputDouble(ref double x, string povidom)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            string s="";
+            string s = "";
             s = x.ToString();
         povtor:
             s = Interaction.InputBox(povidom, "Введення", s);
@@ -59,30 +59,26 @@ namespace LR_9_T2
 
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            int n, i;
-            double x, y, xp, dx;
-            xp = 2.5;
-            dx = 1.5;
+            double x, y, start, step;
+            int n;
+            start = 2.5;
+            step = 1.5;
             n = 5;
-            if (!inputDouble(ref xp, "Введіть x початкове:"))
+            if (!inputDouble(ref start, "Введи x початкове:"))
                 return;
-            if (!inputDouble(ref dx, "Введіть крок:"))
+            if (!inputDouble(ref step, "Введи крок:"))
                 return;
-            if (!inputInt(ref n, "Введіть кількість точок:"))
+            if (!inputInt(ref n, "Введіть к-сть точок:"))
                 return;
 
-            string rez = "x\t\ty\n";
-            x = xp;
-            i = 0;
-            while (i < n)
+            Console.WriteLine("x\t\t y");
+            for (int i = 1; i < n; i++)
             {
-                y = (x + Math.Cos(2 * x)) / (3 * x);
-                rez += x.ToString() + "\t" + y.ToString() + "\n";
-                x += dx;
-                i++;
+                x = start + i * step;
+                y = (Math.Pow(x, 3) - 3) / (3 * Math.Log(x));
+                Console.WriteLine("{0:F2}\t {1:F4}", x, y);
             }
-            MessageBox.Show(rez, "Результати табулювання");
+            Console.ReadKey();
         }
     }
 

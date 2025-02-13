@@ -1,36 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp1
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main()
+        int sum = 0;
+        for (int num = 11; num <= 99; num += 2)
         {
-            try
-            {
-                int count = 0;
-                double product = 1.0;
-                int n = 1;
-                while (count < 7)
-                {
-                    double value = Math.Tan(n);
-                    if (value > 0)
-                    {
-                        product *= value;
-                        count++;
-                    }
-                    n++;
-                    Console.WriteLine("Добуток перших семи додатних елементів послідовності tan(n): " + product);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Сталася помилка: " + ex.Message);
-            }
+            sum += num;
         }
+        Console.WriteLine(sum);
     }
 }
