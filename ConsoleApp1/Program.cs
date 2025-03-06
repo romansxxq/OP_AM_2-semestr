@@ -8,29 +8,35 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        static void Main()
+        public static void BubbleSort()
         {
-            try
-            {
-                int count = 0;
-                double product = 1.0;
-                int n = 1;
-                while (count < 7)
+            int[]arr = { 2, 5, 0, 20 };
+            for (int i = 0; i < arr.Length - 1; i++) {
+                for (int j = 0; j < arr.Length - i - 1; j++)
                 {
-                    double value = Math.Tan(n);
-                    if (value > 0)
+                    if (arr[j] > arr[j+1])
                     {
-                        product *= value;
-                        count++;
+                        int temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
                     }
-                    n++;
-                    Console.WriteLine("Добуток перших семи додатних елементів послідовності tan(n): " + product);
                 }
+
             }
-            catch (Exception ex)
+            
+            for (int i = 0;i < arr.Length; i++)
             {
-                Console.WriteLine("Сталася помилка: " + ex.Message);
+                Console.Write(arr[i] + " ");
             }
+            Console.ReadKey();
+
+
         }
+
+        public static void Main()
+        {
+            BubbleSort();
+        }
+
     }
 }
