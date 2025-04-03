@@ -4,11 +4,16 @@ class Program
 {
     static void Main()
     {
-        int sum = 0;
-        for (int num = 11; num <= 99; num += 2)
+        Random rnd = new Random();
+        int n = 10; // Розмір масиву
+        double a = 17, b = 80; // Межі діапазону
+        double[] mas = new double[n];
+
+        // Заповнюємо масив випадковими числами
+        for (int i = 0; i < n; i++)
         {
-            sum += num;
+            mas[i] = a + rnd.NextDouble() * (b - a);
+            Console.WriteLine($"mas[{i}] = {mas[i]:F2}");
         }
-        Console.WriteLine(sum);
     }
 }
